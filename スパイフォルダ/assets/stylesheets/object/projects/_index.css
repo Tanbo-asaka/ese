@@ -19,6 +19,17 @@
   font-style: italic;
   text-align: center;
 }
+.backImage {
+  margin: auto;
+  
+  position: relative;
+  width: 100%; /* 画像の幅を100%に設定 */
+  mask-image: linear-gradient(to bottom, 
+      rgba(0, 0, 0, 0), 
+      rgba(0, 0, 0, 1) 20%, 
+      rgba(0, 0, 0, 1) 80%, 
+      rgba(0, 0, 0, 0)); 
+}
 
 .backGround {
   background: linear-gradient(black,black,#333,gray,#333,gray);
@@ -26,17 +37,20 @@
   height: 100%;
   margin: auto;
   margin-bottom: 80px;
-  color: whitesmoke;
+
 }
 
 .mainText,.ddName,.ddText,.startText,.questionText {
   text-align: center;
   font-size: 40px;
-  line-height: 3;/*行間の間を開ける*/
+  line-height: 3;
+  color: whitesmoke;
 }
+
 .ddName {
   margin-bottom: 20px;
 }
+
 .mainText,.ddText,.questionText{
   margin-bottom: 300px;
 }
@@ -59,7 +73,6 @@
   color: black;
   margin-bottom: 25px;
 }
-
 
 .lastText {
   text-align: end;
@@ -84,6 +97,86 @@
   margin: auto;
   font-size: 2vw;
 }
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 縦方向の中央揃え */
+  flex-direction: column;
+}
+
+.passDoor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10%;
+}
+.passKey { 
+  width: 100%;
+  border:solid whitesmoke;
+}
+.kiyWard {
+  color: white;
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+}
+
+
+.form-horizontal {
+  font-family: 'Lato';
+  font-weight: 400px;
+}
+
+.form-control,
+textarea {
+  max-width: 80%;
+  color: #000;
+  background-color: #fff;
+}
+
+.send-button {
+  margin-bottom: 1000px;
+  height: 34px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.send-button {
+  width: 60%;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  font: 700 12px 'Lato', sans-serif;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 768px) {
 }
